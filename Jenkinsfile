@@ -33,6 +33,7 @@ pipeline {
         }
         stage("Test") {
             steps{
+                // shell command that checks whether the file build/index.html exists in the current workspace.
                 sh 'test -f build/index.html'
             }
         }
