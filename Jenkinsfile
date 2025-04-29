@@ -12,23 +12,22 @@ pipeline {
             }
             steps {
                 sh '''
-                ls -la
+                    ls -la
 
-                echo ""
-                echo ""
-                echo ""
-                node --version
-                npm --version
-                echo ""
-                echo ""
-                echo ""
-                npm ci
-                npm run build
-                echo ""
-                echo ""
-                echo ""
-                echo "After npm build"
-                ls -la
+                    printf "\\n\\n\\n"
+
+                    node --version
+                    npm --version
+
+                    printf "\\n\\n\\n"
+
+                    npm ci
+                    npm run build
+
+                    printf "\\n\\n\\n"
+
+                    echo "After npm build"
+                    ls -la
                 '''
             }
         }
